@@ -287,7 +287,7 @@ const Theme = () => {
 
   return (
     <ThemeProvider theme={config}>
-      <SEO title="东云睿连" />
+      <SEO title="Superset" />
       <Layout>
         <div css={mainPageStyle}>
           <div css={titleContainer}>

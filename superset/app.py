@@ -237,7 +237,7 @@ class SupersetAppInitializer:
         appbuilder.add_separator("Data")
         appbuilder.add_view(
             SliceModelView,
-            "Charts",
+            "图表",
             label=__("Charts"),
             icon="fa-bar-chart",
             category="",
@@ -245,7 +245,7 @@ class SupersetAppInitializer:
         )
         appbuilder.add_view(
             DashboardModelView,
-            "Dashboards",
+            "看板",
             label=__("Dashboards"),
             icon="fa-dashboard",
             category="",
