@@ -33,7 +33,7 @@ RUN mkdir /app \
 # in order to only build if and only if requirements change
 COPY ./requirements.txt /app/
 RUN cd /app \
-        && pip install --no-cache -r requirements.txt
+        && pip install -i https://mirrors.aliyun.com/pypi/simple --no-cache -r requirements.txt
 
 
 ######################################################################
@@ -119,9 +119,9 @@ COPY ./requirements* ./docker/requirements* /app/
 USER root
 # Cache everything for dev purposes...
 RUN cd /app \
-    && pip install --ignore-installed -e . \
-    && pip install --ignore-installed -r requirements.txt \
-    && pip install --ignore-installed -r requirements-dev.txt \
-    && pip install --ignore-installed -r requirements-extra.txt \
-    && pip install --ignore-installed -r requirements-local.txt || true
+    && pip install -i https://mirrors.aliyun.com/pypi/simple --ignore-installed -e . \
+    && pip install -i https://mirrors.aliyun.com/pypi/simple --ignore-installed -r requirements.txt \
+    && pip install -i https://mirrors.aliyun.com/pypi/simple --ignore-installed -r requirements-dev.txt \
+    && pip install -i https://mirrors.aliyun.com/pypi/simple --ignore-installed -r requirements-extra.txt \
+    && pip install -i https://mirrors.aliyun.com/pypi/simple --ignore-installed -r requirements-local.txt || true
 USER superset
