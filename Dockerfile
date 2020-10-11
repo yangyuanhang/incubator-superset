@@ -38,7 +38,7 @@ COPY superset-frontend/package.json /app/superset-frontend/
 RUN cd /app \
     && mkdir -p superset/static \
     && touch superset/static/version_info.json \
-    && pip install --no-cache -r requirements/local.txt
+    && pip install -i https://mirrors.aliyun.com/pypi/simple --no-cache -r requirements/local.txt
 
 
 ######################################################################
@@ -124,6 +124,6 @@ COPY ./requirements/*.txt ./docker/requirements-*.txt/ /app/requirements/
 USER root
 # Cache everything for dev purposes...
 RUN cd /app \
-    && pip install --no-cache -r requirements/docker.txt \
-    && pip install --no-cache -r requirements/requirements-local.txt || true
+    && pip install -i https://mirrors.aliyun.com/pypi/simple --no-cache -r requirements/docker.txt \
+    && pip install -i https://mirrors.aliyun.com/pypi/simple --no-cache -r requirements/requirements-local.txt || true
 USER superset
