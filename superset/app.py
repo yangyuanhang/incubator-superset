@@ -237,7 +237,7 @@ class SupersetAppInitializer:
         appbuilder.add_separator("Data")
         appbuilder.add_view(
             SliceModelView,
-            "图表",
+            "Charts",
             label=__("Charts"),
             icon="fa-bar-chart",
             category="",
@@ -245,7 +245,7 @@ class SupersetAppInitializer:
         )
         appbuilder.add_view(
             DashboardModelView,
-            "看板",
+            "Dashboards",
             label=__("Dashboards"),
             icon="fa-dashboard",
             category="",
@@ -313,7 +313,7 @@ class SupersetAppInitializer:
             category_icon="fa-wrench",
         )
         appbuilder.add_link(
-            "SQL Editor",
+            _("SQL Editor"),
             label=_("SQL Editor"),
             href="/superset/sqllab",
             category_icon="fa-flask",
@@ -325,15 +325,15 @@ class SupersetAppInitializer:
             __("Saved Queries"),
             href="/sqllab/my_queries/",
             icon="fa-save",
-            category="SQL Lab",
+            category=__("SQL Lab"),
         )
         appbuilder.add_link(
-            "Query Search",
+            _("Query Search"),
             label=_("Query Search"),
             href="/superset/sqllab#search",
             icon="fa-search",
             category_icon="fa-flask",
-            category="SQL Lab",
+            category=__("SQL Lab"),
             category_label=__("SQL Lab"),
         )
         if self.config["CSV_EXTENSIONS"].intersection(
@@ -359,7 +359,7 @@ class SupersetAppInitializer:
                     label=__("Upload Excel"),
                     href="/exceltodatabaseview/form",
                     icon="fa-upload",
-                    category="Data",
+                    category=__("Data"),
                     category_label=__("Data"),
                     category_icon="fa-wrench",
                 )
@@ -389,7 +389,7 @@ class SupersetAppInitializer:
                 DashboardEmailScheduleView,
                 "Dashboard Email Schedules",
                 label=__("Dashboard Emails"),
-                category="Manage",
+                category=__("Manage"),
                 category_label=__("Manage"),
                 icon="fa-search",
             )
