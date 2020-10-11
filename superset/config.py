@@ -886,7 +886,7 @@ SESSION_COOKIE_SECURE = False  # Prevent cookie from being transmitted over non-
 SESSION_COOKIE_SAMESITE = "Lax"  # One of [None, 'None', 'Lax', 'Strict']
 
 # Flask configuration variables
-SEND_FILE_MAX_AGE_DEFAULT = 60 * 60 * 24 * 365  # Cache static resources
+SEND_FILE_MAX_AGE_DEFAULT = 1  # Cache static resources
 
 # URI to database storing the example data, points to
 # SQLALCHEMY_DATABASE_URI by default if set to `None`
