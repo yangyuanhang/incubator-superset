@@ -137,7 +137,7 @@ PROXY_FIX_CONFIG = {"x_for": 1, "x_proto": 1, "x_host": 1, "x_port": 1, "x_prefi
 # GLOBALS FOR APP Builder
 # ------------------------------
 # Uncomment to setup Your App name
-APP_NAME = "Superset"
+APP_NAME = "睿连Superset"
 
 # Uncomment to setup an App icon
 APP_ICON = "/static/assets/images/superset-logo@2x.png"
@@ -200,21 +200,13 @@ PUBLIC_ROLE_LIKE_GAMMA = False
 # Babel config for translations
 # ---------------------------------------------------
 # Setup default language
-BABEL_DEFAULT_LOCALE = "en"
+BABEL_DEFAULT_LOCALE = "zh"
 # Your application default translation path
 BABEL_DEFAULT_FOLDER = "superset/translations"
 # The allowed translation for you app
 LANGUAGES = {
     "en": {"flag": "us", "name": "English"},
-    "it": {"flag": "it", "name": "Italian"},
-    "fr": {"flag": "fr", "name": "French"},
-    "zh": {"flag": "cn", "name": "Chinese"},
-    "ja": {"flag": "jp", "name": "Japanese"},
-    "de": {"flag": "de", "name": "German"},
-    "pt": {"flag": "pt", "name": "Portuguese"},
-    "pt_BR": {"flag": "br", "name": "Brazilian Portuguese"},
-    "ru": {"flag": "ru", "name": "Russian"},
-    "ko": {"flag": "kr", "name": "Korean"},
+    "zh": {"flag": "cn", "name": "Chinese"}
 }
 
 # ---------------------------------------------------
@@ -262,7 +254,7 @@ IMG_UPLOAD_URL = "/static/uploads/"
 # Setup image size default is (300, 200, True)
 # IMG_SIZE = (300, 200, True)
 
-CACHE_DEFAULT_TIMEOUT = 60 * 60 * 24
+CACHE_DEFAULT_TIMEOUT = 10
 CACHE_CONFIG: Dict[str, Any] = {"CACHE_TYPE": "null"}
 TABLE_NAMES_CACHE_CONFIG = {"CACHE_TYPE": "null"}
 
